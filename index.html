@@ -13,35 +13,15 @@
       Clique duas vezes em um item para marcá-lo como completo
     </p>
     <input id="texto-tarefa" type="text" value="" />
-    <br >
-    <ol id="lista-tarefas" ></ol>
-
+    <br />
+    <ol id="lista-tarefas"></ol>
     <button id="criar-tarefa">criar tarefa</button>
     <button id="apaga-tudo">apaga tudo</button>
     <button id="remover-finalizados">remover finalizados</button>
     <button id="salvar-tarefas">salvar-tarefas</button>
     <button id="mover-cima">mover-cima</button>
     <button id="mover-baixo">mover-baixo</button>
-    
+    <button id="remover-selecionado">remover-selecionado</button>
     <script src="./script.js"></script>
   </body>
 </html>
-<!-- function mover(aa) {
-  const locGray = document.querySelector('.gray');
-  const htmlMover = aa;
-  if (locGray.nextSibling != null) {
-    const htmlAtu = locGray.outerHTML;
-    locGray.nextSibling.outerHTML = htmlAtu;
-    locGray.outerHTML = htmlMover;
-  }
-}
-class="gray"
-const MoverBaixo = document.querySelector('.gray').nextSibling.outerHTML;
-const MoverCima = document.querySelector('.gray').previousSibling.outerHTML;
-document.getElementById('mover-baixo').addEventListener('click', () => {
-  mover(MoverBaixo);
-});
-document.getElementById('mover-cima').addEventListener('click', () => {
-  mover(MoverCima);
-});
- -->

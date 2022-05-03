@@ -34,13 +34,11 @@ document.getElementById('salvar-tarefas').addEventListener('click', () => {
   }
 });
 listaSalva();
-
 // criar-tarefa
 document.getElementById('criar-tarefa').addEventListener('click', () => {
   lista.appendChild(document.createElement('li')).innerText = texto.value;
   texto.value = '';
 });
-
 // seleciona
 lista.addEventListener('click', () => {
   if (document.querySelector('.gray') != null) {
@@ -48,8 +46,13 @@ lista.addEventListener('click', () => {
   }
   event.target.classList.toggle('gray');
 });
-
-// mover-baixo
+// remover-selecionado
+document.getElementById('remover-selecionado').addEventListener('click', () => {
+  if (document.querySelector('.gray') != null) {
+    document.querySelector('.gray').remove(document.querySelector('.gray'));
+  }
+});
+// mover
 document.getElementById('mover-baixo').addEventListener('click', () => {
   if (document.querySelector('.gray') != null) {
     const gray = document.querySelector('.gray');
@@ -61,6 +64,7 @@ document.getElementById('mover-baixo').addEventListener('click', () => {
     }
   }
 });
+// mover
 document.getElementById('mover-cima').addEventListener('click', () => {
   if (document.querySelector('.gray') != null) {
     const gray = document.querySelector('.gray');
@@ -71,35 +75,11 @@ document.getElementById('mover-cima').addEventListener('click', () => {
     }
   }
 });
-/* const htmlAtu = document.querySelector('.gray').outerHTML;
-    const htmlNext = document.querySelector('.gray').previousSibling.outerHTML;
-    document.querySelector('.gray').previousSibling.outerHTML = htmlAtu;
-    document.querySelector('.gray').outerHTML = htmlNext; */
-
-/* 
-function mover(aa) {
-  let seila = document.querySelector('.gray').previousSibling;
-  if (aa === 'baixo') {
-    let seila = document.querySelector('.gray').nextSibling;
-  }
-  if (seila != null) {
-    const htmlAtu = document.querySelector('.gray').outerHTML;
-    const htmlNext = seila.outerHTML;
-    seila.outerHTML = htmlAtu;
-    document.querySelector('.gray').outerHTML = htmlNext;
-  }
-} */
-/* 
-const MoverBaixo = document.querySelector('.gray').nextSibling;
-const MoverCima = document.querySelector('.gray').previousSibling; */
-/* document.getElementById('mover-baixo').addEventListener('click', () => {
-  mover('baixo');
-}); */
-
+// add completo
 lista.addEventListener('dblclick', () => {
   event.target.classList.toggle('completed');
 });
-
+// 'apaga-tudo'
 document.getElementById('apaga-tudo').addEventListener('click', () => {
   lista.innerHTML = '';
 });
