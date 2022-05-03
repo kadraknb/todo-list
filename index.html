@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>Minha Lista de Tarefas</header>
     <p id="funcionamento">
       Clique duas vezes em um item para marcá-lo como completo
     </p>
     <input id="texto-tarefa" type="text" value="" />
+    <br >
+    <ol id="lista-tarefas" ></ol>
 
-    <ol id="lista-tarefas"></ol>
-    <p id="save" class="gray"></p>
     <button id="criar-tarefa">criar tarefa</button>
     <button id="apaga-tudo">apaga tudo</button>
     <button id="remover-finalizados">remover finalizados</button>
     <button id="salvar-tarefas">salvar-tarefas</button>
+    <button id="mover-cima">mover-cima</button>
+    <button id="mover-baixo">mover-baixo</button>
     
     <script src="./script.js"></script>
-    
-</body>
+  </body>
 </html>
+<!-- function mover(aa) {
+  const locGray = document.querySelector('.gray');
+  const htmlMover = aa;
+  if (locGray.nextSibling != null) {
+    const htmlAtu = locGray.outerHTML;
+    locGray.nextSibling.outerHTML = htmlAtu;
+    locGray.outerHTML = htmlMover;
+  }
+}
+class="gray"
+const MoverBaixo = document.querySelector('.gray').nextSibling.outerHTML;
+const MoverCima = document.querySelector('.gray').previousSibling.outerHTML;
+document.getElementById('mover-baixo').addEventListener('click', () => {
+  mover(MoverBaixo);
+});
+document.getElementById('mover-cima').addEventListener('click', () => {
+  mover(MoverCima);
+});
+ -->
