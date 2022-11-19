@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do API de Blogs!
+# Boas-vindas ao repositório do todo list!
 
 <details>
   <summary><strong>O que foi desenvolvido</strong></summary>
